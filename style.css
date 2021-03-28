@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+
+:root{
+    --primary-color:#22254b;
+    --secondary-color:#373b69;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{   
+    background-color: var(--primary-color);
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+}
+
+.loader{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.534);
+    z-index: 5;
+    
+}
+
+.loader img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+header{
+    padding: 1rem 1rem 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+}
+
+.logo{
+   font-size: 1.75rem;
+   color: #7378c5;
+   font-family: 'Poppins',sans-serif;
+   text-transform: uppercase;
+   font-weight: bold;
+   letter-spacing: 1px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   cursor: pointer;
+}
+
+.logo span{
+    color: #eee;
+    margin-right: 5px;
+}
+
+.logo img{
+    width: 40px;
+    height: 40px;
+}
+
+.search{
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color: #fff;
+}
+
+
+.search::placeholder{
+    color: #eee;
+}
+
+
+
+.search:focus{
+    outline: none;
+    background-color: var(--primary-color);
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 2rem;
+}
+
+.movie{
+    width: 22%;
+    margin: 1rem;
+    background-color:  var(--secondary-color);
+    box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+@media(max-width:660px){
+    .movie{
+        width: 85%;
+    }
+    header{
+        padding: 1rem;
+    }
+    header .logo{
+        font-size: 1.45rem;
+    }
+    .search{
+        width: 11rem;
+        padding: 0.4rem 0.7rem;
+    }
+}
+
+.movie img{
+    width: 100%;
+    cursor: pointer;
+}
+
+.movie-info{
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3{
+    margin: 0;
+}
+
+.movie-info span{
+    background-color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+
+.movie-info span.green{
+    color: lightgreen;
+}
+.movie-info span.orange{
+    color: orange;
+}
+.movie-info span.red{
+    color: red;
+}
+
+
+.overview{
+    background-color: #fff;
+    padding: 2rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 65%;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview{
+    transform: translateY(0);
+    cursor: pointer;
+}
