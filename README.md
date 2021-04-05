@@ -1,5 +1,7 @@
 <h1><a href="https://affectionate-colden-67a699.netlify.app/"> CHILL FLIX </a></h1>
 
+<img src="./chillflix.png" width="100%"  />
+
 <h1>OverView</h1>
 
 <p> This Movie application will display in the main home page the most popular movies out there with their current rating and 
